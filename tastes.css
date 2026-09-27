@@ -1,0 +1,97 @@
+/* The approved 793 × 1983 mobile composition scales with the existing LP column. */
+.tastes-section {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 793 / 1983;
+  background: var(--cream);
+  color: var(--cocoa);
+}
+.tastes-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.tastes-kicker,
+.tastes-intro h2,
+.tastes-description,
+.taste-number,
+.taste h3,
+.taste-copy,
+.taste-count { position: absolute; margin: 0; }
+.tastes-kicker {
+  top: 6.6cqw;
+  left: 13.1cqw;
+  font-size: 5.45cqw;
+  line-height: 1.2;
+  letter-spacing: -.045em;
+  font-weight: 900;
+  color: #e9560a;
+  transform: rotate(-2deg) scaleX(.95);
+  transform-origin: left center;
+}
+.tastes-intro h2 {
+  top: 15.3cqw;
+  left: 5.8cqw;
+  font-size: 11.5cqw;
+  line-height: 1.05;
+  letter-spacing: -.075em;
+  font-weight: 900;
+  transform: scaleX(.9);
+  transform-origin: left top;
+}
+.tastes-intro h2 span,
+.tastes-description span,
+.taste-copy span { display: block; white-space: nowrap; }
+.tastes-intro h2 span + span { font-size: 11.8cqw; }
+.tastes-description {
+  top: 44.2cqw;
+  left: 6.3cqw;
+  font-size: 3.7cqw;
+  line-height: 1.35;
+  letter-spacing: -.045em;
+  font-weight: 900;
+}
+.taste-number {
+  color: #ed5800;
+  font: italic 900 10.3cqw/1 Arial, sans-serif;
+  letter-spacing: -.045em;
+}
+.taste h3 {
+  font-size: 7.2cqw;
+  line-height: 1.2;
+  letter-spacing: -.06em;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.taste-copy {
+  font-size: 2.8cqw;
+  line-height: 1.5;
+  letter-spacing: -.035em;
+  font-weight: 700;
+}
+.taste-count {
+  width: 18cqw;
+  text-align: center;
+  font-size: 4.4cqw;
+  line-height: 1.2;
+  letter-spacing: -.045em;
+  font-weight: 900;
+  color: #e9560a;
+  transform: rotate(-4deg);
+}
+.taste-butter .taste-number { top: 61.9cqw; left: 5.8cqw; }
+.taste-butter h3 { top: 72.6cqw; left: 5.7cqw; }
+.taste-butter .taste-copy { top: 83.2cqw; left: 5.9cqw; }
+.taste-butter .taste-count { top: 99.6cqw; left: 5.5cqw; }
+.taste-orange .taste-number { top: 123.9cqw; left: 62.1cqw; }
+.taste-orange h3 { top: 135.2cqw; left: 62.1cqw; font-size: 5.6cqw; }
+.taste-orange .taste-copy { top: 143.7cqw; left: 62.4cqw; font-size: 2.7cqw; letter-spacing: -.045em; }
+.taste-orange .taste-count { top: 158.9cqw; left: 61.8cqw; }
+.taste-cacao .taste-number { top: 183.3cqw; left: 6cqw; }
+.taste-cacao h3 { top: 195cqw; left: 5.7cqw; font-size: 7cqw; }
+.taste-cacao .taste-copy { top: 204.3cqw; left: 5.9cqw; }
+.taste-cacao .taste-count { top: 220.6cqw; left: 5.8cqw; }

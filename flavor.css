@@ -1,0 +1,90 @@
+/* Positions follow the approved 910 × 1728 section artboard. */
+.flavor-section {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 910 / 1728;
+  overflow: hidden;
+  background: #ffd632;
+  color: #301204;
+}
+.flavor-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.flavor-intro h2 {
+  position: absolute;
+  top: 5.2cqw;
+  left: 5.2cqw;
+  margin: 0;
+  font-size: 10.9cqw;
+  font-weight: 900;
+  line-height: 1.09;
+  letter-spacing: -.07em;
+}
+.flavor-intro h2 span,
+.flavor-intro p span,
+.point-moist span {
+  display: block;
+  white-space: nowrap;
+}
+.flavor-intro h2 span + span {
+  font-size: 12.7cqw;
+  line-height: 1.04;
+}
+.flavor-intro p {
+  position: absolute;
+  top: 36.3cqw;
+  left: 5.5cqw;
+  margin: 0;
+  font-size: 3.65cqw;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -.035em;
+}
+.flavor-point {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  white-space: nowrap;
+  text-align: center;
+  font-feature-settings: "palt";
+}
+.point-butter {
+  top: 55.2cqw;
+  left: 6.6cqw;
+  width: 35cqw;
+  font-size: 4.2cqw;
+  transform: rotate(-3deg);
+}
+.point-moist {
+  top: 86.8cqw;
+  left: 70cqw;
+  width: 25.7cqw;
+  font-size: 4.6cqw;
+}
+.point-almond {
+  top: 156.2cqw;
+  left: 59.6cqw;
+  width: 33cqw;
+  font-size: 4.05cqw;
+  transform: rotate(-2deg);
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

@@ -1,0 +1,45 @@
+/* The attached 845 × 1860 composition, with real text and native radio inputs. */
+.bands-section {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 845 / 1860;
+  background: #fcf7ed;
+  color: #2c1004;
+  --band-accent: #e84a00;
+  --band-ink: #b93600;
+  --band-tint: #ffeacd;
+}
+.bands-section[data-selected-band="rest"] { --band-accent: #36769e; --band-ink: #285b7d; --band-tint: #e5f0f7; }
+.bands-section[data-selected-band="tea"] { --band-accent: #56743a; --band-ink: #45602e; --band-tint: #eef3df; }
+.bands-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; display: block; pointer-events: none; }
+.bands-variant { z-index: -1; opacity: 0; clip-path: inset(24% 0 44% 0); transition: opacity 180ms ease; }
+.bands-section[data-selected-band="rest"] [data-band-image="rest"],
+.bands-section[data-selected-band="tea"] [data-band-image="tea"] { opacity: 1; }
+.bands-intro h2 { position: absolute; top: 7.4cqw; left: 8.2cqw; margin: 0; font-size: 10cqw; line-height: 1.09; letter-spacing: -.065em; font-weight: 900; transform: scaleX(.94); transform-origin: left top; }
+.bands-intro h2:focus { outline: none; }
+.bands-intro h2 span, .bands-intro p span { display: block; white-space: nowrap; }
+.bands-intro p { position: absolute; top: 44.5cqw; left: 8.5cqw; margin: 0; font-size: 3.85cqw; line-height: 1.45; font-weight: 900; letter-spacing: -.03em; }
+.band-photo { position: absolute; top: 25%; left: 6%; width: 90%; height: 31%; pointer-events: none; }
+.band-selection-status { position: absolute; top: 123.7cqw; left: 9.8cqw; width: 80.4cqw; height: 11cqw; display: flex; align-items: center; justify-content: center; gap: 2.2cqw; margin: 0; padding: 1.2cqw 3cqw; border-radius: 8cqw; background: var(--band-tint); color: var(--band-ink); font-size: 4.35cqw; line-height: 1.2; font-weight: 900; letter-spacing: -.055em; white-space: nowrap; }
+.band-status-check { position: relative; display: block; flex: none; width: 8cqw; height: 8cqw; border-radius: 50%; background: var(--band-accent); }
+.band-status-check::after, .message-band-card:has(input:checked) .band-card-check::after { content: ""; position: absolute; left: 30%; top: 17%; width: 27%; height: 49%; border: solid #fff; border-width: 0 .7cqw .7cqw 0; transform: rotate(40deg); }
+.message-band-options { position: absolute; top: 137.8cqw; left: 3.1cqw; width: 93.8cqw; height: 53cqw; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5cqw; padding: 0; margin: 0; border: 0; min-width: 0; }
+.message-band-card { position: relative; border: .35cqw solid #e7dac6; border-radius: 2.2cqw; cursor: pointer; touch-action: manipulation; transition: border-color 150ms ease, box-shadow 150ms ease; }
+.message-band-card:has(input:checked) { border-color: var(--band-accent); box-shadow: inset 0 0 0 .25cqw #fff; background: linear-gradient(to bottom, #ffdf9d30, #ffdf9d1a); }
+.message-band-card[data-band="rest"]:has(input:checked) { background: #80b7de12; }
+.message-band-card[data-band="tea"]:has(input:checked) { background: #9bbb7f12; }
+.message-band-card:has(input:focus-visible) { outline: 3px solid #235b9a; outline-offset: 4px; }
+.message-band-card input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.band-card-check { position: absolute; top: 1.55cqw; right: 1.6cqw; width: 3.7cqw; height: 3.7cqw; border: .25cqw solid #80644f; border-radius: 50%; background: #fffaf2; pointer-events: none; }
+.message-band-card:has(input:checked) .band-card-check { width: 5cqw; height: 5cqw; top: .95cqw; right: 1cqw; background: var(--band-accent); border-color: #fff; }
+.message-band-card:has(input:checked) .band-card-check::after { border-width: 0 .45cqw .45cqw 0; }
+.band-card-name, .band-card-description { position: absolute; left: 1.3cqw; right: 1.3cqw; text-align: center; pointer-events: none; }
+.band-card-name { top: 28.5cqw; font-size: 4.4cqw; line-height: 1.25; font-weight: 900; letter-spacing: -.075em; }
+.band-card-name > span:not(.visually-hidden), .band-card-description > span { display: block; white-space: nowrap; }
+.band-card-description { top: 40.1cqw; padding-top: 1.8cqw; border-top: .2cqw dashed #d6b591; font-size: 3cqw; line-height: 1.38; letter-spacing: -.07em; font-weight: 700; }
+.message-band-card:has(input:checked) .band-card-description { border-color: var(--band-accent); }
+.band-fee-note { position: absolute; top: 195cqw; left: 7.5cqw; width: 85cqw; height: 10.9cqw; display: flex; align-items: center; justify-content: center; gap: 2.4cqw; margin: 0; border-radius: 8cqw; background: #ffeacd; color: #c83d00; font-weight: 900; font-size: 3.7cqw; line-height: 1.2; letter-spacing: -.05em; white-space: nowrap; }
+.band-fee-note svg { width: 8.2cqw; height: 7cqw; flex: none; color: #f35b0b; }
+.band-order-note { position: absolute; top: 207.5cqw; left: 0; width: 100%; margin: 0; text-align: center; font-size: 2.9cqw; line-height: 1.5; font-weight: 900; letter-spacing: -.035em; }
+.band-order-entry { padding: 6cqw 5cqw 8cqw; background: #fff8e9; }
+@media (hover: hover) { .message-band-card:hover { border-color: #b2835e; } .message-band-card:has(input:checked):hover { border-color: var(--band-accent); } }

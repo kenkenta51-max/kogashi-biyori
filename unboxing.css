@@ -1,0 +1,48 @@
+/* Approved paper-collage composition. Coordinates scale with the mobile column. */
+.unboxing-section {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 821 / 1915;
+  background: #ffcf4e;
+  color: #2c1004;
+}
+.unboxing-art { position: absolute; inset: 0; z-index: -1; display: block; width: 100%; height: 100%; pointer-events: none; }
+#unboxing-title {
+  position: absolute;
+  top: 4.4cqw;
+  left: 5.7cqw;
+  margin: 0;
+  font-size: 11.1cqw;
+  line-height: .97;
+  letter-spacing: -.075em;
+  font-weight: 900;
+  -webkit-text-stroke: .03em currentColor;
+  transform: rotate(-3deg) scaleX(.91);
+  transform-origin: left top;
+}
+#unboxing-title span { display: block; white-space: nowrap; }
+#unboxing-title span:last-child { padding-left: 1.5cqw; }
+.unboxing-number { position: absolute; left: 5.5cqw; color: #e15004; font: italic 900 7.5cqw/1 Arial, sans-serif; letter-spacing: -.045em; transform: rotate(-10deg); }
+.unboxing-give .unboxing-number { top: 42cqw; }
+.unboxing-open .unboxing-number { top: 98.2cqw; }
+.unboxing-write .unboxing-number { top: 156.4cqw; }
+.unboxing-scene h3, .unboxing-caption { position: absolute; margin: 0; text-align: center; font-weight: 900; white-space: nowrap; }
+.unboxing-scene h3 { left: 0; width: 100%; line-height: 1.15; letter-spacing: -.075em; -webkit-text-stroke: .02em currentColor; }
+.unboxing-caption { left: 0; width: 100%; line-height: 1.3; font-size: 3.75cqw; letter-spacing: -.045em; }
+.unboxing-give h3 { top: 77.2cqw; font-size: 7.1cqw; transform: rotate(-2deg) scaleX(.96); }
+.unboxing-give .unboxing-caption { top: 87.1cqw; }
+.unboxing-give-underline { position: absolute; top: 83.6cqw; left: 52.2cqw; width: 23.2cqw; height: 2.2cqw; pointer-events: none; }
+.unboxing-open h3 { top: 138.7cqw; font-size: 6.4cqw; transform: scaleX(.88); }
+.unboxing-open .unboxing-caption { top: 147cqw; }
+.unboxing-write h3 { top: 189.4cqw; font-size: 6.4cqw; transform: scaleX(.9); }
+.unboxing-write .unboxing-caption { top: 198.4cqw; font-size: 3.6cqw; }
+.unboxing-photo { position: absolute; left: 4%; width: 93%; pointer-events: none; }
+.unboxing-give .unboxing-photo { top: 17%; height: 15%; }
+.unboxing-open .unboxing-photo { top: 41%; height: 17%; }
+.unboxing-write .unboxing-photo { top: 67%; height: 13%; }
+.unboxing-contents { list-style: none; padding: 0; margin: 0; }
+.unboxing-contents li { position: absolute; margin: 0; font-size: 4cqw; line-height: 1.3; letter-spacing: -.055em; font-weight: 900; white-space: nowrap; }
+.unboxing-count { top: 208.7cqw; left: 29.2cqw; }
+.unboxing-wrapped { top: 208.7cqw; left: 68.5cqw; }
+.unboxing-band { top: 220.3cqw; left: 29.2cqw; }
+.unboxing-contents .unboxing-card { top: 220.7cqw; left: 67cqw; font-size: 3.2cqw; }

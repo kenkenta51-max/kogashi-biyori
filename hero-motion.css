@@ -1,0 +1,33 @@
+/* A one-shot CM-style entrance. All content remains visible without animation support. */
+.hero-fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.hero-flash,.hero-shockwave,.hero-crumb{position:absolute;display:block;pointer-events:none;opacity:0}
+.hero-flash{left:50%;top:56%;width:76cqw;height:76cqw;border-radius:50%;background:radial-gradient(circle,#fff9cb 0%,#ffe073 34%,#ffc43866 62%,transparent 72%);transform:translate(-50%,-50%) scale(.2)}
+.hero-shockwave{left:50%;top:56%;width:30cqw;height:30cqw;border:1.2cqw solid #fff6c5;border-radius:50%;box-shadow:0 0 2cqw #ff9b2c80;transform:translate(-50%,-50%) scale(.25)}
+.hero-crumb{left:50%;top:56%;width:1.6cqw;height:2cqw;border-radius:38% 48% 28% 45%;background:#8a3b0a;box-shadow:0 0 .5cqw #fff1b0;transform:translate(-50%,-50%) scale(.2)}
+.hero-crumb.c2,.hero-crumb.c5,.hero-crumb.c8{background:#e9780d;width:1.2cqw;height:3.1cqw;border-radius:30%}
+.hero-crumb.c3,.hero-crumb.c6,.hero-crumb.c9{background:#f7d17b;width:2.2cqw;height:1.2cqw}
+.hero-crumb.c1{--dx:-27cqw;--dy:-27cqw;--spin:-180deg;--delay:.05s}.hero-crumb.c2{--dx:25cqw;--dy:-31cqw;--spin:210deg;--delay:.02s}
+.hero-crumb.c3{--dx:-35cqw;--dy:-9cqw;--spin:145deg;--delay:.1s}.hero-crumb.c4{--dx:34cqw;--dy:-13cqw;--spin:-230deg;--delay:.08s}
+.hero-crumb.c5{--dx:-22cqw;--dy:25cqw;--spin:290deg;--delay:.04s}.hero-crumb.c6{--dx:31cqw;--dy:27cqw;--spin:-170deg;--delay:.12s}
+.hero-crumb.c7{--dx:-9cqw;--dy:-38cqw;--spin:240deg;--delay:.06s}.hero-crumb.c8{--dx:12cqw;--dy:-41cqw;--spin:-210deg;--delay:.09s}
+.hero-crumb.c9{--dx:-35cqw;--dy:15cqw;--spin:160deg;--delay:.14s}.hero-crumb.c10{--dx:39cqw;--dy:9cqw;--spin:-270deg;--delay:.11s}
+@media (prefers-reduced-motion:no-preference){
+  .hero-art{transform-origin:50% 31%;animation:cm-photo .82s cubic-bezier(.16,.8,.21,1) both}
+  .hero-flash{animation:cm-flash .58s ease-out .06s both}.hero-shockwave{animation:cm-ring .7s ease-out .08s both}
+  .hero-crumb{animation:cm-crumb .72s cubic-bezier(.18,.6,.28,1) var(--delay) both}
+  .hero-stage h1>span:first-child{animation:cm-title-left .46s cubic-bezier(.18,.85,.25,1.1) .26s both}
+  .hero-stage h1>span:last-child{animation:cm-title-right .48s cubic-bezier(.18,.85,.25,1.1) .36s both}
+  .hero-stage .underline path{stroke-dasharray:180;stroke-dashoffset:180;animation:cm-underline .36s ease-out .72s both}
+  .hero-copy{animation:cm-copy .43s ease-out .67s both}
+  .purchase h2,.purchase .contents{animation:cm-copy .38s ease-out .77s both}
+  .purchase .price,.purchase .shipping,.purchase .choose-button{animation:cm-copy .42s ease-out .86s both}
+}
+@keyframes cm-photo{from{opacity:.3;transform:scale(1.075)}to{opacity:1;transform:scale(1)}}
+@keyframes cm-flash{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}23%{opacity:.86}100%{opacity:0;transform:translate(-50%,-50%) scale(2.2)}}
+@keyframes cm-ring{0%{opacity:0;transform:translate(-50%,-50%) scale(.25)}20%{opacity:.9}100%{opacity:0;transform:translate(-50%,-50%) scale(2.6)}}
+@keyframes cm-crumb{0%{opacity:0;transform:translate(-50%,-50%) rotate(0deg) scale(.2)}23%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(var(--spin)) scale(1)}}
+@keyframes cm-title-left{from{opacity:0;transform:translate(-4cqw,1cqw) rotate(-2deg)}to{opacity:1;transform:none}}
+@keyframes cm-title-right{from{opacity:0;transform:translate(4cqw,1cqw) rotate(2deg)}to{opacity:1;transform:none}}
+@keyframes cm-underline{to{stroke-dashoffset:0}}
+@keyframes cm-copy{from{opacity:0;transform:translateY(1.7cqw)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-flash,.hero-shockwave,.hero-crumb{display:none}}
